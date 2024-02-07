@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="124dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/etKilos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:ems="10"
+        android:hint="Kilos (X.xx)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <EditText
+        android:id="@+id/etEstatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Estatura"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@id/etKilos"
+        app:layout_constraintTop_toBottomOf="@id/etKilos"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEstatura"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="429dp" />
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <TextView
+        android:id="@+id/tvRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="36dp"
+        android:text="Salud"
+        app:layout_constraintStart_toStartOf="@id/tvIMC"
+        app:layout_constraintTop_toBottomOf="@id/tvIMC" />
+</androidx.constraintlayout.widget.ConstraintLayout>
